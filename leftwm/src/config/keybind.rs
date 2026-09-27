@@ -21,6 +21,7 @@ pub struct Keybind {
     pub value: String,
     pub modifier: Option<Modifier>,
     pub key: String,
+    #[serde(default)]
     pub on_release: Option<bool>,
 }
 
