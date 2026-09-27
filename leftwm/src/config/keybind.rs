@@ -21,6 +21,7 @@ pub struct Keybind {
     pub value: String,
     pub modifier: Option<Modifier>,
     pub key: String,
+    pub on_release: Option<bool>,
 }
 
 #[cfg(feature = "lefthk")]
@@ -121,6 +122,7 @@ impl Keybind {
                 .clone()
                 .into(),
             key: self.key.clone(),
+            on_release: self.on_release.unwrap_or(false),
         })
     }
 }
